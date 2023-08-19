@@ -1,0 +1,29 @@
+{
+  "name": "tsvelodata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@antiadmin/anticaptchaofficial": "^1.0.39",
+    "axios": "^1.4.0",
+    "axios-cookiejar-support": "^4.0.7",
+    "csv-writer": "^1.6.0",
+    "generate-password": "^1.7.0",
+    "imap": "^0.8.19",
+    "mailparser": "^3.6.5",
+    "readline-sync": "^1.4.10",
+    "socks-proxy-agent": "^8.0.1",
+    "tough-cookie": "^4.1.3",
+    "user-agents": "^1.0.1444"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.9",
+    "@types/user-agents": "^1.0.2"
+  }
+}
