@@ -12,6 +12,7 @@ const delay = require("./delay.ts");
 
 const { random } = require("user-agents");
 const { SocksProxyAgent } = require("socks-proxy-agent");
+const { HttpsProxyAgent } = require("https-proxy-agent");
 
 const genPassword = () => {
   return generator.generate({
@@ -56,10 +57,13 @@ async function signUp(email, proxy) {
     )}`,
     "user-agent": random().toString(),
   };
-  const agent = new SocksProxyAgent(`socks5://${proxy}`);
+
   const session = axios.create({
     headers: headers,
-    httpsAgent: agent,
+    httpsAgent:
+      config.proxyType === "http"
+        ? new HttpsProxyAgent(`http://${proxy}`)
+        : new SocksProxyAgent(`socks5://${proxy}`),
   });
 
   const password = genPassword();

@@ -42,7 +42,7 @@ function parseProxies(filePath) {
   return proxies;
 }
 
-async function signUpRecursive(emails, proxies, index = 0, numThreads = 4) {
+function signUpRecursive(emails, proxies, index = 0, numThreads = 4) {
   if (index >= emails.length) {
     return;
   }

@@ -2,7 +2,8 @@ const config = {
   ANTICAPTCHA_API_KEY: "",
   numThreads: 4,
   ref: "",
-  customDelay: 5000,
+  proxyType: "http", // socks5 http
+  customDelay: 0,
 };
 
 module.exports = config;
