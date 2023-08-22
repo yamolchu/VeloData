@@ -106,7 +106,7 @@ async function signUp(email, proxy) {
     jar.setCookieSync(cookie, "https://velodata.app");
   });
 
-  await delay(10000);
+  await delay(config.waitOtpDelay);
 
   fetchOtpCode(email)
     .then((otpCode) => {
