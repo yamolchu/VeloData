@@ -1,7 +1,8 @@
 const config = {
-  ANTICAPTCHA_API_KEY: "", //capmonster
+  ANTICAPTCHA_API_KEY: "",
   numThreads: 4,
-  ref: "", //рефка id
+  ref: "",
+  customDelay: 5000,
 };
 
 module.exports = config;

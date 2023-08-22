@@ -8,12 +8,11 @@ const jar = new CookieJar();
 
 const fetchOtpCode = require("./fetchOtpCode.ts");
 const config = require("../inputs/config.ts");
+const delay = require("./delay.ts");
+
 const { random } = require("user-agents");
 const { SocksProxyAgent } = require("socks-proxy-agent");
 
-function delay(time) {
-  return new Promise((resolve) => setTimeout(resolve, time));
-}
 const genPassword = () => {
   return generator.generate({
     length: 12,
