@@ -77,7 +77,7 @@ async function signUp(email, proxy) {
   try {
     const response = await session.post(regUrl, json_data);
     if (response.status === 200) {
-      console.log(`Proxy: socks5://${proxy}`);
+      console.log(`Proxy: ${proxy}`);
       console.log(`Registration ${email.email} was successful`);
       const resultData = [
         {
